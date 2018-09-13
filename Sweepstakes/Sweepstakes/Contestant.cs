@@ -15,7 +15,7 @@ namespace Sweepstakes
         public string registryNumber;
 
 
-        public void captureUserInfo()
+        public void CaptureUserInfo()
         {
             firstName = UserInterface.tempFirstName;
             lastName = UserInterface.tempLastName;

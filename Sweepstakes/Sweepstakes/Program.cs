@@ -10,7 +10,9 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            Sweepstakes sweepstake = new Sweepstakes();
+            Sweepstakes sweepstakes = new Sweepstakes();
+            UserInterface.DisplaySweepstakesConditions();
+            UserInterface.GetUserInfo();
         }
     }
 }
