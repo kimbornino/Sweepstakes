@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class UserInterface
+    public static class UserInterface
     {
+        //remeber, this class cannot be instantiated anywhere.  Use only for communicating with user and sending info to other classes.
     }
 }
