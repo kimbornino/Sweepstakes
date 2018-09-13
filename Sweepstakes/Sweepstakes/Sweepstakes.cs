@@ -31,7 +31,7 @@ namespace Sweepstakes
         {
 
         }
-        public void Sweepstakes(String name)
+        public void DoSomethingWithSweepstakes(String name)
         {
 
         }
