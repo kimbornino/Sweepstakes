@@ -13,16 +13,23 @@ namespace Sweepstakes
         public string lastName;
         public string emailAddress;
         public string registryNumber;
+        public List<String> contestantData;
 
-
-        public void CaptureUserInfo()
+        public Contestant()
         {
             firstName = UserInterface.tempFirstName;
             lastName = UserInterface.tempLastName;
             emailAddress = UserInterface.tempEmail;
             registryNumber = UserInterface.tempRegistryNumber;
+            contestantData = new List<string>();
         }
-               
-    }
 
+        public void MakeContestantIntoString()
+        {
+            contestantData.Add(firstName);
+            contestantData.Add(lastName);
+            contestantData.Add(emailAddress);
+            contestantData.Add(registryNumber);
+        }
+    }
 }
