@@ -11,8 +11,11 @@ namespace Sweepstakes
         static void Main(string[] args)
         {
             Sweepstakes sweepstakes = new Sweepstakes();
-            UserInterface.DisplaySweepstakesConditions();
             UserInterface.GetUserInfo();
+            sweepstakes.contestant.StoreContestant();
+            sweepstakes.contestant.MakeContestantIntoList(sweepstakes.contestant);
+            Console.WriteLine(sweepstakes.contestant.contestantData);
+            Console.ReadKey();
         }
     }
 }

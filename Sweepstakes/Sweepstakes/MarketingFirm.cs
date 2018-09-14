@@ -24,7 +24,7 @@ namespace Sweepstakes
             if (dataStructureChoice == "Queue")
             {
                 //how to I designate which one to acitivate
-                SweepstakesQueueManager.AddIndividualContestantsToStructure();
+                //SweepstakesQueueManager.AddIndividualContestantsToStructure();
             }
             else
             {

@@ -10,23 +10,23 @@ namespace Sweepstakes
     {
         //Member variables
         String winner;
-        List<string> ContestantInfo;
-        Contestant contestant;
+        List<string> contestantInfo;
+        public Contestant contestant;
         
         //constructor
         public Sweepstakes()
         {
             contestant = new Contestant();
-            ContestantInfo = new List<string>();
+            contestantInfo = new List<string>();
         }
         //methods
         public string PickWinner()
         {
             //where is the list of contestants coming from?  Need to designate in method so can grab contestants (plural) list
             Random getWinnerNumber = new Random();
-            int winningNumber = getWinnerNumber.Next(0, contestants.Count);
+            //int winningNumber = getWinnerNumber.Next(0, contestants.Count);
 
-            winner = contestants[winningNumber]
+           // winner = contestants[winningNumber]
                 return winner;
         }
         public void PrintContestantInfo(Contestant contestant)

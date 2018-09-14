@@ -17,19 +17,28 @@ namespace Sweepstakes
 
         public Contestant()
         {
+            firstName = null;
+            lastName = null;
+            emailAddress = null;
+            registryNumber = null;
+            contestantData = new List<string>();
+        }
+
+        public void StoreContestant()
+        {
             firstName = UserInterface.tempFirstName;
             lastName = UserInterface.tempLastName;
             emailAddress = UserInterface.tempEmail;
             registryNumber = UserInterface.tempRegistryNumber;
-            contestantData = new List<string>();
         }
 
-        public void MakeContestantIntoString()
+        public List<string> MakeContestantIntoList(Contestant contestant)
         {
             contestantData.Add(firstName);
             contestantData.Add(lastName);
             contestantData.Add(emailAddress);
             contestantData.Add(registryNumber);
+            return contestantData;
         }
     }
 }
