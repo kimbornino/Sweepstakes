@@ -25,16 +25,37 @@ namespace Sweepstakes
 
             if (dataStructureChoice == "Queue")
             {
-                ISweepstakesManager.SweepstakesQueueManager.AddIndividualContestantsToStructure(sweepstakes.dictionary);
+                //run this version of sweepstakes
             }
             if (dataStructureChoice == "Stack")
             {
-                SweepstakesStackManager.AddIndividualContestantsToStructure(sweepstakes.dictionary);
+                //run this version of sweepstakes
+            }
+            else
+            {
+                Console.WriteLine("Please type a valid storage type.");
             }
         }
-        public void RunSweepstakes()
+        public void RunSweepstakesWithStack()
         {
 
+            sweepstakes.RegisterContestant(sweepstakes.contestant);
+            sweepstakes.
+            sweepstakes.SweepstakesStackManager.AddIndividualContestantsToStructure(Dictionary<string, List<string>> dictionaryEntry);
+            sweepstakes.PickWinner();
+            sweepstakes.PrintWinner();
+            sweepstakes.PrintContestantInfo(sweepstakes.contestant);
+            //method to notify winner
+
         }
+        public void RunSweepstakesWithQueue()
+        {
+            sweepstakes.RegisterContestant(sweepstakes.contestant);
+            sweepstakes.sweepstakesQueueManager.AddIndividualContestantsToStructure(Dictionary<string, List<string>> dictionaryEntry);
+            sweepstakes.PickWinner();
+            sweepstakes.PrintContestantInfo(sweepstakes.contestant);
+            //method to notify winner
+        }
+        
     }
 }

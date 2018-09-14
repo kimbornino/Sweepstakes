@@ -39,8 +39,9 @@ namespace Sweepstakes
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-            //
-            //foreach (contestentInfo in dictionay)
+            {
+                Console.WriteLine(winner);
+            }
 
         }
 
