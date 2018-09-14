@@ -31,14 +31,5 @@ namespace Sweepstakes
             emailAddress = UserInterface.tempEmail;
             registryNumber = UserInterface.tempNumber;
         }
-
-        public List<string> MakeContestantIntoList(Contestant contestant)
-        {
-            contestantData.Add(firstName);
-            contestantData.Add(lastName);
-            contestantData.Add(emailAddress);
-            contestantData.Add(registryNumber);
-            return contestantData;
-        }
     }
 }

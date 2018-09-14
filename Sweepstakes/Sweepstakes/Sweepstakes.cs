@@ -18,6 +18,7 @@ namespace Sweepstakes
         {
             contestant = new Contestant();
             contestantInfo = new List<string>();
+            // need to put contestant data here
         }
         //methods
         public string PickWinner()
@@ -39,6 +40,10 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
+            contestantInfo.Add(contestant.firstName);
+            contestantInfo.Add(contestant.lastName);
+            contestantInfo.Add(contestant.emailAddress);
+            contestantInfo.Add(contestant.registryNumber);
             
         }
         public void DoSomethingWithSweepstakes(String name)
