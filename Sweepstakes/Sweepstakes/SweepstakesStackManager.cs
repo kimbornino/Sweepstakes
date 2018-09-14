@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakesStackManager //: //ISweepstakesManager
+    class SweepstakesStackManager : ISweepstakesManager
     {
+        //can use push and pop to create stack.  Will need to take in costumerList
     }
 }

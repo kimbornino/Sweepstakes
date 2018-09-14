@@ -8,5 +8,14 @@ namespace Sweepstakes
 {
     class ISweepstakesManager
     {
+        public void AddIndividualContestantsToStructure()
+        {
+            
+        }
+        public void RemoveContestantsFromStructure()
+        {
+
+        }
+  
     }
 }

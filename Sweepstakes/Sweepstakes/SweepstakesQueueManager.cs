@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakesQueueManager //: ISweepStakesManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
         //member variables
-        Contestant contestant = new Contestant();
+        public Contestant contestant;
+        public List<Contestant> listOfContestants;
 
         //constructor
         public SweepstakesQueueManager()
         {
-            
+            contestant = new Contestant();
+            listOfContestants = new List<Contestant>();
         }
         public void EnqueueOnQueue(List<Contestant> contestantData)
         {
+            //have each new contestant created stored here
             Queue<List<string>> queue = new Queue<List<string>>();
 
-            queue.Enqueue(constestant.contestantData)
+        
+            {
+
+            }
+
+            queue.Enqueue(contestant.contestantData);
 
             List<string> startOfQueue = queue.Dequeue();
             //can assign items to take out of queue
