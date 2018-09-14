@@ -8,11 +8,11 @@ namespace Sweepstakes
 {
     class ISweepstakesManager
     {
-        public void AddIndividualContestantsToStructure()
+        public void AddIndividualContestantsToStructure(List<Contestant> contestantData)
         {
             
         }
-        public void RemoveContestantsFromStructure()
+        public void RemoveContestantsFromStructure(List<Contestant> contestantData)
         {
 
         }

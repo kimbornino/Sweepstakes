@@ -18,20 +18,20 @@ namespace Sweepstakes
             contestant = new Contestant();
             listOfContestants = new List<Contestant>();
         }
-        public void EnqueueOnQueue(List<Contestant> contestantData)
+
+        public new void AddIndividualContestantsToStructure(List<Contestant> contestantData)
         {
             //have each new contestant created stored here
             Queue<List<string>> queue = new Queue<List<string>>();
 
-        
-            {
-
-            }
-
+        }
+        public new void RemoveContestantsFromStructure(List<Contestant> contestantData)
+        {
             queue.Enqueue(contestant.contestantData);
 
             List<string> startOfQueue = queue.Dequeue();
-            //can assign items to take out of queue
+
         }
+
     }
 }
