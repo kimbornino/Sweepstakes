@@ -29,7 +29,7 @@ namespace Sweepstakes
             firstName = UserInterface.tempFirstName;
             lastName = UserInterface.tempLastName;
             emailAddress = UserInterface.tempEmail;
-            registryNumber = UserInterface.tempRegistryNumber;
+            registryNumber = UserInterface.tempNumber;
         }
 
         public List<string> MakeContestantIntoList(Contestant contestant)

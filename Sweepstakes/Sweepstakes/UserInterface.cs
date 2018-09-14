@@ -12,7 +12,7 @@ namespace Sweepstakes
         public static string tempFirstName;
         public static string tempLastName;
         public static string tempEmail;
-        public static string tempRegistryNumber;
+        public static string tempNumber;
         //remeber, this class cannot be instantiated anywhere.  Use only for communicating with user and sending info to other classes.
         public static void DisplaySweepstakesConditions()
         {
@@ -34,12 +34,11 @@ namespace Sweepstakes
             Console.WriteLine("Please enter your email address: ");
             tempEmail = Console.ReadLine();
         }
-        public static string AssignRegistrationNumber()
+        public static void AssignRegistrationNumber()
         {
             Random rnd = new Random();
-            int tempRegistryNumber = rnd.Next(0, 10000);
-            string tempNumber= tempRegistryNumber.ToString();
-            return tempNumber;
+            int tempRegistryNumber = rnd.Next(1000, 9999);
+            tempNumber= tempRegistryNumber.ToString();
         }
        
         public static void GetUserInfo()
