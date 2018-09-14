@@ -17,15 +17,6 @@ namespace Sweepstakes
 
         public Contestant()
         {
-            firstName = null;
-            lastName = null;
-            emailAddress = null;
-            registryNumber = null;
-            contestantData = new List<string>();
-        }
-
-        public void StoreContestant()
-        {
             firstName = UserInterface.tempFirstName;
             lastName = UserInterface.tempLastName;
             emailAddress = UserInterface.tempEmail;

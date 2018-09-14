@@ -10,22 +10,22 @@ namespace Sweepstakes
     {
         //member variables
         public Contestant contestant;
-        public List<Contestant> listOfContestants;
 
         //constructor
         public SweepstakesQueueManager()
         {
             contestant = new Contestant();
-            listOfContestants = new List<Contestant>();
+            
         }
 
-        public new void AddIndividualContestantsToStructure(List<Contestant> contestantData)
+        public void AddIndividualContestantsToStructure(Dictionary<string, List<string>> dictionary)
         {
-            //have each new contestant created stored here
             Queue<List<string>> queue = new Queue<List<string>>();
+            //this adds
+            queue.Enqueue(sweepstakes.dictionaryEntry);
 
         }
-        public new void RemoveContestantsFromStructure(List<Contestant> contestantData)
+        public void RemoveContestantsFromStructure(Dictionary<string, List<string>> dictionary)
         {
             //not sure where this que came from....
           //  queue.Enqueue(contestant.contestantData);

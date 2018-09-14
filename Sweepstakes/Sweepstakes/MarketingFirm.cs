@@ -10,11 +10,13 @@ namespace Sweepstakes
     {
         //member variables
         ISweepstakesManager sweepstakesManager;
+        Sweepstakes sweepstakes;
         //constructor
 
         public MarketingFirm(ISweepstakesManager sweepstakesManager)
         {
             this.sweepstakesManager = sweepstakesManager;
+            sweepstakes = new Sweepstakes("LlamaParty");
         }
         public void ChooseStorageMethod()
         {
@@ -23,13 +25,16 @@ namespace Sweepstakes
 
             if (dataStructureChoice == "Queue")
             {
-                //how to I designate which one to acitivate
-                //SweepstakesQueueManager.AddIndividualContestantsToStructure();
+                ISweepstakesManager.SweepstakesQueueManager.AddIndividualContestantsToStructure(sweepstakes.dictionary);
             }
-            else
+            if (dataStructureChoice == "Stack")
             {
-
+                SweepstakesStackManager.AddIndividualContestantsToStructure(sweepstakes.dictionary);
             }
+        }
+        public void RunSweepstakes()
+        {
+
         }
     }
 }

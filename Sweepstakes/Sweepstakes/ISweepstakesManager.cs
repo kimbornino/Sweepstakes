@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace Sweepstakes
 {
     class ISweepstakesManager
+        //member variables
+
     {
-        public void AddIndividualContestantsToStructure(List<Contestant> contestantData)
+        public void AddIndividualContestantsToStructure(Dictionary<string, List<string>> dictionary)
         {
             
         }
-        public void RemoveContestantsFromStructure(List<Contestant> contestantData)
+        public void RemoveContestantsFromStructure (Dictionary<string, List<string>> dictionary)
         {
 
         }

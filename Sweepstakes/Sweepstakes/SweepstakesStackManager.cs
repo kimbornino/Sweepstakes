@@ -15,12 +15,12 @@ namespace Sweepstakes
         {
             contestant = new Contestant();
         }
-        public new void AddIndividualContestantsToStructure(List<Contestant> contestant)
+        public void AddIndividualContestantsToStructure(List<Contestant> contestantInfo)
         {
             Stack<List<Contestant>> contestants = new Stack<List<Contestant>>();
-            contestants.Push(contestant);
+            contestants.Push(contestantInfo);
         }
-        public new void RemoveContestantsFromStructure(List<Contestant> contestantData)
+        public void RemoveContestantsFromStructure(List<Contestant> contestantInfo)
         {
             //not sure what goes here exactly.  Know that I need to be able to "pop" to remove.
         }

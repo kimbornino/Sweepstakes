@@ -10,8 +10,7 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            Sweepstakes sweepstakes = new Sweepstakes();
-            
+            Sweepstakes sweepstakes = new Sweepstakes("llama party");
             
         }
     }
