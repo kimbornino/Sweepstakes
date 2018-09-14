@@ -20,9 +20,15 @@ namespace Sweepstakes
             Stack<List<Contestant>> contestants = new Stack<List<Contestant>>();
             contestants.Push(contestantInfo);
         }
-        //public void RemoveContestantsFromStructure(List<Contestant> contestantInfo)
-        //{
-        //not sure what goes here exactly.  Know that I need to be able to "pop" to remove.
-        //}
+        void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+
+        }
+
+        Sweepstakes GetSweepstakes()
+        {
+            return null;
+        }
+     
     }
 }
