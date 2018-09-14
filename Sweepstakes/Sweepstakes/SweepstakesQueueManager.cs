@@ -27,6 +27,7 @@ namespace Sweepstakes
         }
         public new void RemoveContestantsFromStructure(List<Contestant> contestantData)
         {
+            //not sure where this que came from....
             queue.Enqueue(contestant.contestantData);
 
             List<string> startOfQueue = queue.Dequeue();

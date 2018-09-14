@@ -8,6 +8,21 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
-        //can use push and pop to create stack.  Will need to take in costumerList
+        //member variables
+        public Contestant contestant;
+
+        public SweepstakesStackManager()
+        {
+            contestant = new Contestant();
+        }
+        public new void AddIndividualContestantsToStructure(List<Contestant> contestant)
+        {
+            Stack<List<Contestant>> contestants = new Stack<List<Contestant>>();
+            contestants.Push(contestant);
+        }
+        public new void RemoveContestantsFromStructure(List<Contestant> contestantData)
+        {
+            //not sure what goes here exactly.  Know that I need to be able to "pop" to remove.
+        }
     }
 }
