@@ -11,31 +11,28 @@ namespace Sweepstakes
         //Member variables
         String winner;
         List<string> contestantInfo;
-        public Dictionary<string, List<string>> dictionaryEntry;  
+        public Dictionary<string, List<string>> contestantDictionary;  
         public Contestant contestant;
         public string name;
         
         //constructor
         public Sweepstakes(String name)
-      
         {
             winner = null;
             contestant = new Contestant();
             contestantInfo = new List<string>();
-            dictionaryEntry = new Dictionary<string, List<string>>();
-            name = "llama Party";
-            // need to put contestant data here
+            contestantDictionary = new Dictionary<string, List<string>>();
+            name = null;
         }
         //methods
         public string PickWinner()
         {
-            //where is the data  of contestants coming from?  Need to designate in method so can grab contestants (plural) list
             Random getWinnerNumber = new Random();
-            //need to search randomly through QUEUE to pull
-            //int winningNumber = getWinnerNumber.Next(0, contestants.Count);
+            int winningNumber = getWinnerNumber.Next(0, contestantDictionary.Count);
 
-           //winner = contestants[winningNumber]
+            int tempWinner = contestantDictionary[winningNumber];
                 return winner;
+
         }
         public void PrintContestantInfo(Contestant contestant)
         {
@@ -47,6 +44,8 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
+            UserInterface.GetContestantInfo();
+            contestant.SetContestantObject();
             contestantInfo.Add(contestant.firstName);
             contestantInfo.Add(contestant.lastName);
             contestantInfo.Add(contestant.emailAddress);
@@ -54,5 +53,11 @@ namespace Sweepstakes
 
             dictionaryEntry.Add(contestant.registryNumber, contestantInfo);
         }
+       //non=essential
+        // public void createSweepstakes()
+        //{
+
+
+        //}
     }
 }

@@ -9,28 +9,24 @@ namespace Sweepstakes
     class SweepstakesQueueManager : ISweepstakesManager
     {
         //member variables
-        public Contestant contestant;
+       
+        public Queue<Sweepstakes> queue;
 
         //constructor
         public SweepstakesQueueManager()
         {
-            contestant = new Contestant();
+            queue = new Queue<Sweepstakes>();
         }
 
-        public void AddToQueue(List<string> dictionaryEntry)
-        {
-            Queue<List<string>> queue = new Queue<List<string>>();
-            queue.Enqueue(dictionaryEntry);
-
-        }
         void InsertSweepstakes(Sweepstakes sweepstakes)
         {
+            queue.Enqueue(sweepstakes);
 
         }
 
         Sweepstakes GetSweepstakes()
         {
-            return null;
+            return queue.Dequeue();
         }
 
     }

@@ -17,6 +17,13 @@ namespace Sweepstakes
 
         public Contestant()
         {
+            firstName = null;
+            lastName = null;
+            emailAddress = null;
+            registryNumber = null;
+        }
+        public void SetContestantObject()
+        {
             firstName = UserInterface.tempFirstName;
             lastName = UserInterface.tempLastName;
             emailAddress = UserInterface.tempEmail;

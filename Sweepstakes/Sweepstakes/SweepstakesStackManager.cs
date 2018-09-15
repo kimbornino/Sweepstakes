@@ -8,27 +8,25 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
-        //member variables
-        public Sweepstakes sweepstakes;
+       
+        public Stack<Sweepstakes> stack;
 
         public SweepstakesStackManager()
         {
-            sweepstakes = new Sweepstakes("");
+            stack = new Stack<Sweepstakes>();
         }
-        public void AddIndividualContestantsToStructure(List<Contestant> contestantInfo)
-        {
-            Stack<List<Contestant>> contestants = new Stack<List<Contestant>>();
-            contestants.Push(contestantInfo);
-        }
+        
         void InsertSweepstakes(Sweepstakes sweepstakes)
         {
+            stack.Push(sweepstakes);
 
         }
 
+        //figure this one out
         Sweepstakes GetSweepstakes()
         {
-            return null;
+        return stack.Pop();
+
         }
-     
     }
 }

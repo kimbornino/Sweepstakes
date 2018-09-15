@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
+    //should take in a "get" that instantiates the correct design pattern
     class MarketingFirm
     {
         //member variables
@@ -16,46 +17,27 @@ namespace Sweepstakes
         public MarketingFirm(ISweepstakesManager sweepstakesManager)
         {
             this.sweepstakesManager = sweepstakesManager;
-            sweepstakes = new Sweepstakes("LlamaParty");
+            //sweepstakes = new Sweepstakes("");
         }
-        public void ChooseStorageMethod()
+        
+       public static MarketingFirm MarketingFirmFactory (string storageMethod)
         {
-            Console.WriteLine("How would you like to store your contestant data?  Type Queue or Stack");
-            string dataStructureChoice = Console.ReadLine();
-
-            if (dataStructureChoice == "Queue")
+            ISweepstakesManager manager;
+            if (storageMethod == "queue")
             {
-                //run this version of sweepstakes
+                manager = new SweepstakesQueueManager();
             }
-            if (dataStructureChoice == "Stack")
+            else if (storageMethod == "stack")
             {
-                //run this version of sweepstakes
+                manager = new SweepstakesStackManager();
             }
             else
             {
-                Console.WriteLine("Please type a valid storage type.");
+                //could throw exception to handle this
+                return null;
             }
+            return new MarketingFirm(manager);
         }
-        public void RunSweepstakesWithStack()
-        {
 
-            sweepstakes.RegisterContestant(sweepstakes.contestant);
-            sweepstakes.
-            sweepstakes.SweepstakesStackManager.AddIndividualContestantsToStructure(Dictionary<string, List<string>> dictionaryEntry);
-            sweepstakes.PickWinner();
-            sweepstakes.PrintWinner();
-            sweepstakes.PrintContestantInfo(sweepstakes.contestant);
-            //method to notify winner
-
-        }
-        public void RunSweepstakesWithQueue()
-        {
-            sweepstakes.RegisterContestant(sweepstakes.contestant);
-            sweepstakes.sweepstakesQueueManager.AddIndividualContestantsToStructure(Dictionary<string, List<string>> dictionaryEntry);
-            sweepstakes.PickWinner();
-            sweepstakes.PrintContestantInfo(sweepstakes.contestant);
-            //method to notify winner
-        }
-        
     }
 }
