@@ -13,7 +13,6 @@ namespace Sweepstakes
         public string lastName;
         public string emailAddress;
         public string registryNumber;
-        public List<String> contestantData;
 
         public Contestant()
         {

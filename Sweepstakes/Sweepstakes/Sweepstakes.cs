@@ -9,20 +9,16 @@ namespace Sweepstakes
     class Sweepstakes
     {
         //Member variables
-        String winner;
         List<string> contestantInfo;
-        public Dictionary<string, List<string>> contestantDictionary;  
-        public Contestant contestant;
+        public Dictionary<string, Contestant> contestantDictionary;  
         public string name;
         
         //constructor
         public Sweepstakes(String name)
         {
-            winner = null;
-            contestant = new Contestant();
             contestantInfo = new List<string>();
-            contestantDictionary = new Dictionary<string, List<string>>();
-            name = null;
+            contestantDictionary = new Dictionary<string, Contestant>();
+            this.name = name;
         }
         //methods
         public string PickWinner()
@@ -30,30 +26,25 @@ namespace Sweepstakes
             Random getWinnerNumber = new Random();
             int winningNumber = getWinnerNumber.Next(0, contestantDictionary.Count);
 
-            int tempWinner = contestantDictionary[winningNumber];
-                return winner;
+            Contestant winner = Enumerable.ToList(contestantDictionary.Values)[winningNumber];
+            return winner.firstName;
 
         }
         public void PrintContestantInfo(Contestant contestant)
         {
             {
-                Console.WriteLine(winner);
+                Console.WriteLine(contestant.firstName + contestant.lastName + contestant.emailAddress + contestant.registryNumber);
             }
 
         }
 
         public void RegisterContestant(Contestant contestant)
         {
-            UserInterface.GetContestantInfo();
-            contestant.SetContestantObject();
-            contestantInfo.Add(contestant.firstName);
-            contestantInfo.Add(contestant.lastName);
-            contestantInfo.Add(contestant.emailAddress);
-            contestantInfo.Add(contestant.registryNumber);
-
-            dictionaryEntry.Add(contestant.registryNumber, contestantInfo);
+          
+            contestantDictionary.Add(contestant.registryNumber, contestant);
         }
-       //non=essential
+       
+        //non=essential
         // public void createSweepstakes()
         //{
 

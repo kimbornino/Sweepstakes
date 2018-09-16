@@ -11,6 +11,14 @@ namespace Sweepstakes
         static void Main(string[] args)
         {
             Sweepstakes sweepstakes = new Sweepstakes("llama party");
+            UserInterface.GetContestantInfo();
+
+            Console.ReadKey();
+
+            //where is the best place for these?
+            //UserInterface.GetContestantInfo();
+            //contestant.SetContestantObject();
         }
+        
     }
 }
