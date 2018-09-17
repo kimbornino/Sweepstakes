@@ -12,16 +12,19 @@ namespace Sweepstakes
         //member variables
         ISweepstakesManager sweepstakesManager;
         Sweepstakes sweepstakes;
+       
         //constructor
 
         public MarketingFirm(ISweepstakesManager sweepstakesManager)
         {
             this.sweepstakesManager = sweepstakesManager;
-            //sweepstakes = new Sweepstakes("");
+            sweepstakes = new Sweepstakes("");
         }
         
        public static MarketingFirm MarketingFirmFactory (string storageMethod)
         {
+            UserInterface.ChooseStorage();
+          
             ISweepstakesManager manager;
             if (storageMethod == "queue")
             {
@@ -38,6 +41,22 @@ namespace Sweepstakes
             }
             return new MarketingFirm(manager);
         }
+        
+        //started to build method
+        //public void RunSweepstakes()
+        //{
 
+            //Contestant number = UserInterface.GetNumberOfContestants();
+            //sweepstakes.RegisterContestant(sweepstakes.contestant);
+            //for (int i = 0; i<= numberOfContestants; i++)
+            //{
+                //sweepstakes.contestant.SetContestantObject();
+                //sweepstakes.RegisterContestant(sweepstakes.contestant);
+
+            //}
+
+        //}
+        
+         
     }
 }

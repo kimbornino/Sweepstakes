@@ -13,11 +13,8 @@ namespace Sweepstakes
         public static string tempLastName;
         public static string tempEmail;
         public static string tempNumber;
-        //remeber, this class cannot be instantiated anywhere.  Use only for communicating with user and sending info to other classes.
-        //public static void DisplaySweepstakesConditions()
-        //{
-            //Console.WriteLine("There is an exciting opportunity fo you to join our email list and win big. \n Our current sweepstakes offer is giving you the change to WIN A VISIT FROM A LLAMA! \n Invite all of your friends and family to a costumized llama party, complete with refreshments, wine, and treats for the llama. \n You will be notified via the email you submit if your name is chosen.\n Thanks for joining us!\n\n");
-        //}
+               
+  
         public static void GetFirstName()
         {
             Console.WriteLine("Please enter contestants first name: ");
@@ -47,10 +44,10 @@ namespace Sweepstakes
             GetLastName();
             GetEmail();
             AssignRegistrationNumber();
-            DisplayInfoToContestant();
+            DisplayContestantInfoToUser();
             
         }
-        public static void DisplayInfoToContestant()
+        public static void DisplayContestantInfoToUser()
         {
 
             Console.WriteLine("You entered: \n Name: " + tempFirstName + " " + tempLastName + "\n Email: " + tempEmail + "\n Does everything look correct?  Please type YES or NO.");
@@ -64,6 +61,19 @@ namespace Sweepstakes
             {
                 UserInterface.GetContestantInfo();
             }
+        }
+
+        public static void GetNumberOfContestants()
+        {
+            Console.WriteLine("How many contestants would you like to register?");
+            int numberOfContestants = Int32.Parse(Console.ReadLine());
+        }
+
+    public static string ChooseStorage()
+        {
+            Console.WriteLine("How would you like to store this sweepstakes?  stack or queue?");
+            string storageMethod = Console.ReadLine();
+            return storageMethod;
         }
     }
 }

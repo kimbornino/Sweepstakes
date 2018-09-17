@@ -12,6 +12,8 @@ namespace Sweepstakes
         List<string> contestantInfo;
         public Dictionary<string, Contestant> contestantDictionary;  
         public string name;
+        public Contestant contestant;
+  
         
         //constructor
         public Sweepstakes(String name)
@@ -19,6 +21,7 @@ namespace Sweepstakes
             contestantInfo = new List<string>();
             contestantDictionary = new Dictionary<string, Contestant>();
             this.name = name;
+            contestant = new Contestant();
         }
         //methods
         public string PickWinner()
@@ -43,12 +46,6 @@ namespace Sweepstakes
           
             contestantDictionary.Add(contestant.registryNumber, contestant);
         }
-       
-        //non=essential
-        // public void createSweepstakes()
-        //{
-
-
-        //}
+             
     }
 }

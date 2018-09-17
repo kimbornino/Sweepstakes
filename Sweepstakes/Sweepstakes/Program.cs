@@ -10,15 +10,10 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            Sweepstakes sweepstakes = new Sweepstakes("llama party");
-            UserInterface.GetContestantInfo();
+            Sweepstakes sweepstakes = new Sweepstakes("Llama Party");
+            ISweepstakesManager sweepstakesManager = new ISweepstakesManager();
+            MarketingFirm.MarketingFirmFactory("");
 
-            Console.ReadKey();
-
-            //where is the best place for these?
-            //UserInterface.GetContestantInfo();
-            //contestant.SetContestantObject();
         }
-        
     }
 }
