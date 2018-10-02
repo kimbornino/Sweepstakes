@@ -13,21 +13,19 @@ namespace Sweepstakes
         public Queue<Sweepstakes> queue;
 
         //constructor
-        public SweepstakesQueueManager()
+       public SweepstakesQueueManager()
         {
             queue = new Queue<Sweepstakes>();
         }
 
-        void InsertSweepstakes(Sweepstakes sweepstakes)
+        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            queue.Enqueue(sweepstakes);
-
+            queue = new Queue<Sweepstakes>();
         }
 
-        Sweepstakes GetSweepstakes()
+        Sweepstakes ISweepstakesManager.GetSweepstakes()
         {
             return queue.Dequeue();
         }
-
     }
 }

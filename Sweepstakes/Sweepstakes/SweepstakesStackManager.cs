@@ -11,22 +11,15 @@ namespace Sweepstakes
        
         public Stack<Sweepstakes> stack;
 
-        public SweepstakesStackManager()
+
+        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
         {
             stack = new Stack<Sweepstakes>();
         }
-        
-        void InsertSweepstakes(Sweepstakes sweepstakes)
+
+        Sweepstakes ISweepstakesManager.GetSweepstakes()
         {
-            stack.Push(sweepstakes);
-
-        }
-
-        //figure this one out
-        Sweepstakes GetSweepstakes()
-        {
-        return stack.Pop();
-
+            return stack.Pop();
         }
     }
 }
